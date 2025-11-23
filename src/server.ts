@@ -18,7 +18,7 @@ class Server {
 	}
 
 	private corsOptions: cors.CorsOptions = {
-		origin: (process.env.CORS_ORIGINS ?? 'http://localhost:5173').split(',').map(s => s.trim()),
+		origin: (process.env.CORS_ORIGINS ?? 'http://localhost:5173,https://botcode95.github.io/eureky/').split(',').map(s => s.trim()),
 		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
 		allowedHeaders: ['Content-Type','Authorization'],
 		credentials: true,
